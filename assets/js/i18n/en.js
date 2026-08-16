@@ -127,6 +127,8 @@ window.TOON_I18N.en = {
     madeWith: "Made for readers everywhere."
   },
 
+  fab: { label: "Support", title: "Open the Support Center" },
+
   support: {
     crumbHome: "Home",
     crumbHere: "Support Center",

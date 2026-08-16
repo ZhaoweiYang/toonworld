@@ -1222,6 +1222,76 @@ html[data-theme="dark"] .select { background-color: var(--surface-2); }
 .legal__body li { margin-bottom: 7px; }
 .legal__updated { font-size: 0.86rem; color: var(--text-mute); margin-bottom: 28px; }
 
+/* ------------------------------------------------ floating support cta --- */
+
+.fab {
+  position: fixed;
+  inset-inline-end: clamp(14px, 3vw, 26px);
+  bottom: clamp(14px, 3vw, 26px);
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 22px 13px 16px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(120deg, var(--brand-500), var(--accent-500));
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.96rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.45), 0 2px 6px rgba(23, 19, 42, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.fab:hover {
+  text-decoration: none;
+  color: #fff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(124, 58, 237, 0.55), 0 2px 6px rgba(23, 19, 42, 0.24);
+}
+.fab:active { transform: translateY(-1px) scale(1); }
+
+.fab__ico {
+  width: 26px; height: 26px;
+  display: grid; place-items: center;
+  flex: none;
+}
+.fab__ico svg { width: 24px; height: 24px; }
+
+/* Attention ring — sits behind the pill and keeps pulsing. */
+.fab::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: inherit;
+  opacity: 0.55;
+  z-index: -1;
+  animation: fab-pulse 2.6s ease-out infinite;
+}
+
+@keyframes fab-pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  70% { transform: scale(1.28); opacity: 0; }
+  100% { transform: scale(1.28); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fab::before { animation: none; opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .fab { padding: 12px 18px 12px 14px; font-size: 0.9rem; }
+  .fab__ico { width: 22px; height: 22px; }
+  .fab__ico svg { width: 21px; height: 21px; }
+}
+
+/* Keep the floating button clear of the last line of the footer. */
+body:has(.fab) .footer__bottom { padding-bottom: 46px; }
+@media (min-width: 700px) {
+  body:has(.fab) .footer__bottom { padding-bottom: 20px; }
+}
+
 /* reveal on scroll */
 .reveal {
   opacity: 0;

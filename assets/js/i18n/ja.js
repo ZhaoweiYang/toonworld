@@ -127,6 +127,8 @@ window.TOON_I18N.ja = {
     madeWith: "世界中の読者のために。"
   },
 
+  fab: { label: "サポート", title: "サポートセンターを開く" },
+
   support: {
     crumbHome: "ホーム",
     crumbHere: "サポートセンター",

@@ -127,6 +127,8 @@ window.TOON_I18N["zh-Hant"] = {
     madeWith: "為世界各地的讀者而做。"
   },
 
+  fab: { label: "客服中心", title: "前往客服中心" },
+
   support: {
     crumbHome: "首頁",
     crumbHere: "客服中心",
