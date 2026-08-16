@@ -346,7 +346,7 @@
 
             <div class="field">
               <label for="r-date"><span data-i18n="support.refund.dateLabel">Date of the charge</span><span class="req" aria-hidden="true">*</span></label>
-              <input class="input" type="date" id="r-date" name="chargeDate" data-validate="required">
+              <input class="input" type="date" id="r-date" name="chargeDate" data-validate="required" data-eligibility>
               <span class="error-msg" role="alert"></span>
             </div>
 
@@ -431,6 +431,16 @@
           <h3 class="result__title">Your request has been recorded</h3>
           <div class="ticket"><span data-i18n="support.result.ticketLabel">Reference</span> <b class="result__ticket-value"></b></div>
           <p class="result__body"></p>
+          <div class="notice notice--ok result__assurance">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/>
+            </svg>
+            <div>
+              <strong class="result__assurance-title">Received</strong><br>
+              <span class="result__assurance-body">Your request qualifies for our 30-day refund policy.</span>
+            </div>
+          </div>
           <div class="notice notice--warn result__mail">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
               <path d="M12 9v4M12 17h.01M10.3 3.9 2.6 17a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/>
@@ -602,6 +612,16 @@
           <h3 class="result__title">Your request has been recorded</h3>
           <div class="ticket"><span data-i18n="support.result.ticketLabel">Reference</span> <b class="result__ticket-value"></b></div>
           <p class="result__body"></p>
+          <div class="notice notice--ok result__assurance">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/>
+            </svg>
+            <div>
+              <strong class="result__assurance-title">Received</strong><br>
+              <span class="result__assurance-body">Your request qualifies for our 30-day refund policy.</span>
+            </div>
+          </div>
           <div class="notice notice--warn result__mail">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
               <path d="M12 9v4M12 17h.01M10.3 3.9 2.6 17a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/>

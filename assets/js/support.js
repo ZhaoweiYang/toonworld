@@ -385,11 +385,35 @@
 
   /* ---------------------------------------------------------- submitting --- */
 
+  /**
+   * Refunds are unconditional within 30 days of the charge; anything older is
+   * still reviewed, just by hand. Cancellations always get the standard note —
+   * the form has no reliable "last charge" date to test against.
+   */
+  function assurancePath(form, kind) {
+    if (kind === "refund") {
+      var input = $("input[data-eligibility]", form);
+      if (input && input.value) {
+        var charged = new Date(input.value + "T00:00:00");
+        var days = (Date.now() - charged.getTime()) / 86400000;
+        if (!isNaN(days) && days > 30) return "support.refund.assuranceLate";
+      }
+    }
+    return "support." + kind + ".assurance";
+  }
+
   function showResult(form, data) {
     var panel = form.closest(".panel");
     var result = $(".result", panel);
     form.hidden = true;
     result.hidden = false;
+
+    var assurance = $(".result__assurance", result);
+    if (assurance) {
+      var path = assurancePath(form, data.kind);
+      $(".result__assurance-title", assurance).textContent = t(path + ".title");
+      $(".result__assurance-body", assurance).textContent = t(path + ".body");
+    }
 
     $(".result__ticket-value", result).textContent = data.ticket;
     $(".result__title", result).textContent = t(data.sent ? "support.result.sentTitle" : "support.result.title");

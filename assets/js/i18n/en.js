@@ -91,7 +91,7 @@ window.TOON_I18N.en = {
       { q: "Is ToonWorld free?", a: "Yes. A large part of the catalogue is free, and a daily pass unlocks additional chapters at no cost. Coins and subscriptions are optional and only unlock chapters faster." },
       { q: "What is included in the subscription?", a: "A ToonWorld Premium subscription gives you unlimited access to every title marked Premium, removes wait timers and lets you download for offline reading. It renews automatically until you cancel." },
       { q: "How do I cancel my subscription?", a: "Open the Support Center, choose “Cancel subscription”, and send us your account email plus a screenshot of the billing receipt. If you subscribed through the App Store or Google Play, also cancel in the store so it stops renewing." },
-      { q: "Can I get a refund?", a: "Yes, in the cases described in our refund policy — for example a duplicate charge, a purchase you did not authorise, or a chapter that never unlocked. Send a refund request with your billing screenshot and we will reply within two business days." },
+      { q: "Can I get a refund?", a: "Yes. Purchases made in the last 30 days can be refunded for any reason — just send a refund request with your billing screenshot. We reply within two business days and complete the refund within 14 business days." },
       { q: "Which languages do you support?", a: "The app interface and our official translations are available in English, Japanese and Traditional Chinese. The website follows your browser language automatically and you can override it at any time." },
       { q: "Do you support tablets?", a: "Yes. ToonWorld runs on iPhone, iPad and Android phones and tablets, and your reading position syncs between all of them." }
     ]
@@ -202,7 +202,7 @@ window.TOON_I18N.en = {
       title: "Request a refund",
       lead: "Tell us what was charged and attach the receipt. We check every request manually.",
       notice: "Purchases made through the App Store or Google Play are billed by Apple and Google. We will review your case and, when it qualifies, help you push the refund through the store — which is the only party that can move the money back.",
-      policyTitle: "We can normally refund when:",
+      policyTitle: "You can ask for a refund for any reason within 30 days of purchase. We prioritise these cases:",
       policyItems: [
         "you were charged twice for the same order,",
         "coins or a chapter were never delivered after payment,",
@@ -233,6 +233,14 @@ window.TOON_I18N.en = {
         other: "Other reason"
       },
       detailsPlaceholder: "Describe what happened and when. If you already contacted Apple, Google or your bank, tell us what they said.",
+      assurance: {
+        title: "Received — covered by our 30-day no-questions-asked refund",
+        body: "Your purchase is within 30 days, so it qualifies for a refund for any reason. We will complete the refund within 14 business days, back to the payment method you used. There is nothing else for you to do in the meantime — we will email you as soon as it is done, so please sit tight."
+      },
+      assuranceLate: {
+        title: "Received — a specialist will review it",
+        body: "This charge is more than 30 days old, so it falls outside the no-questions-asked window. We will still review it by hand and come back to you with a decision within 14 business days."
+      },
       submit: "Submit refund request"
     },
 
@@ -270,6 +278,10 @@ window.TOON_I18N.en = {
       refundToo: "I also want a refund for the most recent charge.",
       refundTooHint: "We will handle it together with this cancellation.",
       confirmLabel: "I understand that cancelling stops future renewals, and that I keep Premium access until the end of the period I already paid for.",
+      assurance: {
+        title: "Received — covered by our 30-day no-questions-asked refund",
+        body: "Your subscription is within 30 days of purchase, so it qualifies for a refund for any reason. We will complete the cancellation and the refund within 14 business days. There is nothing else for you to do in the meantime — we will email you as soon as it is done, so please sit tight."
+      },
       submit: "Submit cancellation request"
     },
 
@@ -370,7 +382,7 @@ window.TOON_I18N.en = {
         { h: "Your account", p: "You are responsible for what happens under your account and for keeping your credentials safe. Tell us straight away if you think someone else is using it." },
         { h: "Licence to read", p: "Buying coins, a chapter or a subscription gives you a personal, non-transferable licence to read the content in the app. It does not transfer ownership, and downloading, recording or redistributing content is not allowed." },
         { h: "Subscriptions", p: "Premium subscriptions renew automatically at the end of each period until cancelled. Cancel at least 24 hours before the renewal date to avoid the next charge. You keep access until the end of the period you already paid for." },
-        { h: "Refunds", p: "Refunds are handled as described in the Support Center. Purchases made through the App Store or Google Play are subject to those stores' own refund rules, which we cannot override." },
+        { h: "Refunds", p: "You can request a refund for any reason within 30 days of the purchase, through the Support Center. Approved refunds are completed within 14 business days. Purchases made through the App Store or Google Play are also subject to those stores' own refund rules, which we cannot override." },
         { h: "Acceptable use", p: "Do not attempt to bypass payment, scrape the catalogue, upload unlawful material, or interfere with the service. We may suspend accounts that do." },
         { h: "Availability", p: "We work to keep ToonWorld available, but the catalogue changes as licences begin and end, and a title may become unavailable in your region." },
         { h: "Contact", p: "Questions about these terms: legal@toonworld.app." }
