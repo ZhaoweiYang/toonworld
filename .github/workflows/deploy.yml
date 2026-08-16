@@ -1,10 +1,11 @@
 name: Deploy to GitHub Pages
 
+# Only main deploys: the github-pages environment rejects any other branch,
+# so triggering elsewhere would just produce a failed run.
 on:
   push:
     branches:
       - main
-      - claude/toonworld-official-website-8w29qu
   workflow_dispatch:
 
 # Allow the workflow to publish to Pages.
